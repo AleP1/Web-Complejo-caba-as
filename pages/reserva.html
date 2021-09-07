@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="../styles/estilos.css" rel="stylesheet" type="text/css" />
+    <title>Mi proyecto con JavaScript</title>
+</head>
+
+<body>
+    <hearder>
+        <div>
+            <strong>Email</strong>
+            <a href="www.gmail.com"> info@sitio.com.ar</a>
+            <strong>Whatsapp</strong>
+            <a href="www.whatsapp.com">+54 099 0123456789</a>
+        </div>
+        <div><a href="">Cabañas Aluminé</a></div>
+        <nav>
+            <ul>
+                <img src="" alt="logo">
+                <li><a> Donde estamos </a></li>
+                <li><a> Cabañas </a></li>
+                <li><a> Servicios </a></li>
+                <li><a href="./pages/reserva.html"> Reserva online </a></li>
+                <li><a> Contacto </a></li>
+            </ul>
+        </nav>
+        </header>
+
+        <form id="form" action="" class="row g-3">
+            <div class="col-md-5">
+                <label for="form__name" class="form-label">Nombre completo:</label>
+                <input id="form__name" class="form-control" type="text" name="name">
+
+                <label for="form__phone" class="form-label">telefono: </label>
+                <input id="form__phone" class="form-control" type="tel" name="phone">
+
+                <label for="form__email" class="form-label">Email: </label>
+                <input id="form__email" class="form-control" type="email" name="email">
+
+                <label for="form__checkin" class="form-label">Check In: </label>
+                <input id="form__checkin" class="form-control" type="date" name="checkin">
+
+                <label for="form__checkout" class="form-label">Check Out:</label>
+                <input id="form__checkout" class="form-control" type="date" name="checkout">
+
+                <label for="form__comments" class="form-label">Comentarios: :</label>
+                <input id="form__comments" class="form-control" type="textarea" name="comments">
+
+                <label>Tipo de cabaña: </label>
+                <input list="form__type">
+                <datalist id="form__type">
+                    <option value="Cabaña pequeña(2 personas)" />
+                    <option value="Cabaña mediana(3 o 4 personas)" />
+                    <option value="Cabaña grande(5 o 6 personas)" />
+                    <option value="Cabaña muy grande(7 o más personas)" />
+                </datalist>
+
+                <div class="col-12 form__buttons">
+                    <input id="form__send" type="submit" class="btn btn-primary" value="Enviar solicitud" onclick={click()}>
+                    <input id="form__reset" type="reset" class="btn btn-primary" value="Borrar">
+                </div>
+            </div>
+        </form>
+
+        <script src="../script.js"></script>
+
+</body>
+
+</html>
