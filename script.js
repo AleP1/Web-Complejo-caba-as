@@ -30,35 +30,32 @@ const bookingList = [];
 
 function editDom() {
     for (const booking of bookingList) {
-        let container = document.getElementById("form");
-
-        container.innerHTML = `<div class="col-md-5"><h3> Su reserva se a completado con exito! </h3>
-                            <p> Su nro de reserva es: ${booking.id} </p>
+        const modal = ` <p> Su nro de reserva es: ${booking.id} </p>
                             <p>  A nombre de: ${booking.name}</p>
                             <p> Email: ${booking.email} </p>
                             <p>  Telefono: ${booking.phone} </p>
                             <p> Desde el ${booking.checkInDay} </p>
-                            <p> Al ${booking.checkOutDay} </p></div>`;
+                            <p> Al ${booking.checkOutDay} </p>
+                            <p><strong>Será contactado a la brevedad</strong>`
 
-        document.body.appendChild(container);
+        $("#modal").append(modal)
     }
 }
 
 
 //Eventos
-let EnviarForm = document.getElementById("form__send");
-EnviarForm.addEventListener("click", submit);
+$("#form__send").on("click", submit);
 
 function submit() {
 
     const id = Math.floor(Math.random() * (1000000 - 1)) + 1
-    const diaIngreso = document.getElementById("form__checkin").value
-    const diaEgreso = document.getElementById('form__checkout').value
-    const nombre = document.getElementById('form__name').value
-    const mail = document.getElementById('form__email').value
-    const telefono = document.getElementById('form__phone').value
-    const comentarios = document.getElementById('form__comments').value
-    const tipo = document.getElementById('form__type').value
+    const diaIngreso = $("#form__checkin").val()
+    const diaEgreso = $("#form__checkout").val()
+    const nombre = $("#form__name").val()
+    const mail = $("#form__email").val()
+    const telefono = $("#form__phone").val()
+    const comentarios = $("#form__comments").val()
+    const tipo = $("#form__type").val()
 
     const newBooking = new Booking(id, diaIngreso, diaEgreso, nombre, mail, telefono, comentarios, tipo);
     console.log('newBooking es: ' + JSON.stringify(newBooking))
@@ -72,7 +69,7 @@ function submit() {
         const guardarEnLocalStorage = (clave, valor) => { localStorage.setItem(clave, valor) };
 
         for (let i = 0; i < bookingList.length; i++) {
-            guardarEnLocalStorage(`${i}`, JSON.stringify(bookingList[i]))
+            guardarEnLocalStorage(`${ i } `, JSON.stringify(bookingList[i]))
         }
         console.log('localStorage es: ' + JSON.stringify(localStorage))
     }
