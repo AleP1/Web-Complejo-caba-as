@@ -28,18 +28,22 @@ class Booking {
 //Array con todas las reservas
 const bookingList = [];
 
-function editDom() {
-    for (const booking of bookingList) {
-        const modal = ` <p> Su nro de reserva es: ${booking.id} </p>
-                            <p>  A nombre de: ${booking.name}</p>
-                            <p> Email: ${booking.email} </p>
-                            <p>  Telefono: ${booking.phone} </p>
-                            <p> Desde el ${booking.checkInDay} </p>
-                            <p> Al ${booking.checkOutDay} </p>
+function editDom(newBooking) {
+    //for (const booking of bookingList) {
+    const modal = ` <p> Su nro de reserva es: ${newBooking.id} </p>
+                            <p>  A nombre de: ${newBooking.name}</p>
+                            <p> Email: ${newBooking.email} </p>
+                            <p>  Telefono: ${newBooking.phone} </p>
+                            <p> Desde el ${newBooking.checkInDay} </p>
+                            <p> Al ${newBooking.checkOutDay} </p>
                             <p><strong>Será contactado a la brevedad</strong>`
 
-        $("#modal").append(modal)
-    }
+    $(".modal-body").append(modal)
+
+    $("#form__send").on("click", function() {
+            $("#exampleModal").show()
+        })
+        // }
 }
 
 
@@ -61,7 +65,7 @@ function submit() {
     console.log('newBooking es: ' + JSON.stringify(newBooking))
     bookingList.push(newBooking);
     console.log("La lista de reservas es: " + JSON.stringify(bookingList));
-    editDom();
+    editDom(newBooking);
 
     //LocalStorage
     const Storage = () => {
@@ -75,3 +79,29 @@ function submit() {
     }
     Storage()
 }
+
+//Animaciones
+$("body").fadeIn("slow");
+$(".services__cards-card").click(() => {
+    $(".services__cards-card").fadeOut("fast", function() {
+        return $(".services__cards-card").fadeIn("fast");
+    })
+});
+
+$(".card-1").fadeIn(400, function() {
+    $(".card-2").fadeIn(400, function() {
+        $(".card-3").fadeIn(400, function() {
+            $(".card-4").fadeIn(400, function() {
+                $(".card-5").fadeIn(400, function() {
+                    $(".card-6").fadeIn(400, function() {
+                        $(".card-7").fadeIn(400, function() {
+                            $(".card-8").fadeIn(400);
+                        });
+                    });
+                });
+            });
+        });
+    });
+});
+
+$("#form").slideDown(1000);
