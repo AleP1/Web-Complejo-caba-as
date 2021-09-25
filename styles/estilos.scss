@@ -70,6 +70,12 @@ body {
             }
         }
     }
+    .carousel__section {
+        display: none;
+        img {
+            height: 600px;
+        }
+    }
     .services {
         display: flex;
         flex-direction: column;

@@ -94,6 +94,14 @@ body .nav .nav__list .nav__list-item a {
   font-size: 18px;
 }
 
+body .carousel__section {
+  display: none;
+}
+
+body .carousel__section img {
+  height: 600px;
+}
+
 body .services {
   display: -webkit-box;
   display: -ms-flexbox;
