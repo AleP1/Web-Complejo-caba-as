@@ -21,7 +21,6 @@ class Booking {
             comments: this.comments,
             type: this.type
         }
-        console.log("Data es: " + data);
     }
 }
 
@@ -67,6 +66,22 @@ function submit() {
     console.log("La lista de reservas es: " + JSON.stringify(bookingList));
     editDom(newBooking);
 
+    //AJAX con JQuery
+    $("#save").click(() => {
+        APIURL = 'https://jsonplaceholder.typicode.com/posts'
+
+        infoPost = newBooking;
+
+        $.ajax({
+            method: "POST",
+            url: APIURL,
+            data: infoPost,
+            success: function(respuesta) {
+                console.log(`Los datos se han guardado correctamente: ${JSON.stringify(respuesta)}`)
+            }
+        });
+    });
+
     //LocalStorage
     const Storage = () => {
 
@@ -105,3 +120,19 @@ $(".card-1").fadeIn(400, function() {
 });
 
 $("#form").slideDown(1000);
+
+/*AJAX con JQuery
+$(".save").click((newBooking) => {
+    APIURL = 'https://jsonplaceholder.typicode.com/posts'
+
+    infoPost = newBooking;
+
+    $.ajax({
+        method: "POST",
+        url: APIURL,
+        data: infoPost,
+        success: function(respuesta) {
+            console.log(`Los datos se han guardado correctamente: ${respuesta}`)
+        }
+    });
+});*/
