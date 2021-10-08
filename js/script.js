@@ -10,25 +10,12 @@ class Booking {
         this.comments = comments;
         this.type = type;
     }
-    bookingData() {
-        const data = {
-            id: this.id,
-            checkInDay: this.checkInDay,
-            checkOutDay: this.checkOutDay,
-            name: this.name,
-            email: this.email,
-            phone: this.phone,
-            comments: this.comments,
-            type: this.type
-        }
-    }
 }
 
 //Array con todas las reservas
 const bookingList = [];
 
 function editDom(newBooking) {
-    //for (const booking of bookingList) {
     const modal = ` <p> Su nro de reserva es: ${newBooking.id} </p>
                             <p>  A nombre de: ${newBooking.name}</p>
                             <p> Email: ${newBooking.email} </p>
@@ -40,9 +27,8 @@ function editDom(newBooking) {
     $(".modal-body").append(modal)
 
     $("#form__send").on("click", function() {
-            $("#exampleModal").show()
-        })
-        // }
+        $("#exampleModal").show()
+    })
 }
 
 
@@ -87,8 +73,8 @@ function submit() {
 
         const guardarEnLocalStorage = (clave, valor) => { localStorage.setItem(clave, valor) };
 
-        for (let i = 0; i < bookingList.length; i++) {
-            guardarEnLocalStorage(`${ i } `, JSON.stringify(bookingList[i]))
+        for (let i = 0; i <= bookingList.length; i++) {
+            guardarEnLocalStorage(`Reservas`, JSON.stringify(bookingList[i]))
         }
         console.log('localStorage es: ' + JSON.stringify(localStorage))
     }
@@ -120,19 +106,3 @@ $(".card-1").fadeIn(400, function() {
 });
 
 $("#form").slideDown(1000);
-
-/*AJAX con JQuery
-$(".save").click((newBooking) => {
-    APIURL = 'https://jsonplaceholder.typicode.com/posts'
-
-    infoPost = newBooking;
-
-    $.ajax({
-        method: "POST",
-        url: APIURL,
-        data: infoPost,
-        success: function(respuesta) {
-            console.log(`Los datos se han guardado correctamente: ${respuesta}`)
-        }
-    });
-});*/

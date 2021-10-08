@@ -23,7 +23,6 @@ $bgColor: #fff;
 }
 
 body {
-    display: none;
     background-color: $bgColor;
     a {
         color: #AB8742;
@@ -71,9 +70,9 @@ body {
         }
     }
     .carousel__section {
-        display: none;
+        //display: none;
         img {
-            height: 600px;
+            height: 900px;
         }
     }
     .services {
@@ -93,7 +92,6 @@ body {
             justify-content: center;
             .services__cards-card {
                 display: flex;
-                display: none;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -112,7 +110,7 @@ body {
         }
     }
     #form {
-        display: none;
+        //display: none;
         margin: 40px 0;
     }
     .footer {
@@ -143,10 +141,31 @@ body {
         }
         .logo {
             @include margin;
+            height: 40% !important;
+        }
+    }
+    .carousel__section {
+        img {
+            height: 40% !important;
+        }
+    }
+    a {
+        font-size: 10px !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .carousel__section {
+        img {
+            height: 60% !important;
         }
     }
 }
 
-@media only screen and (max-width: 640px) {}
-
-@media only screen and (max-width: 640px) {}
+@media only screen and (max-width: 1200px) {
+    .carousel__section {
+        img {
+            height: 80% !important;
+        }
+    }
+}
