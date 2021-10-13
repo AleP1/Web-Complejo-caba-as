@@ -1,8 +1,9 @@
 @import "reserva";
 $bgColor: #fff;
+$fontColor: #666;
 @mixin size {
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
 }
 
 @mixin margin {
@@ -24,6 +25,9 @@ $bgColor: #fff;
 
 body {
     background-color: $bgColor;
+    main {
+        background-color: $bgColor;
+    }
     a {
         color: #AB8742;
         text-decoration: none;
@@ -31,6 +35,44 @@ body {
     a:hover {
         color: #846831;
         text-decoration: underline;
+    }
+    .img-text {
+        width: 100%;
+        height: 300px;
+        display: block;
+        text-align: center;
+        padding: 40% 5%;
+        border-radius: 15px;
+        h2 {
+            font-size: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+    .single-box {
+        position: relative;
+        margin-bottom: 30px;
+    }
+    .img-area {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        border: 5px solid #fff;
+        overflow: hidden;
+        //top: 15px;
+        //left: 125px;
+        border-radius: 50%;
+        img {
+            width: 100%;
+        }
+    }
+    .carousel-indicators {
+        left: 0;
+        top: auto;
+        bottom: -70px;
     }
     .banner {
         display: flex;
@@ -70,9 +112,65 @@ body {
         }
     }
     .carousel__section {
-        //display: none;
         img {
-            height: 900px;
+            height: 650px;
+        }
+    }
+    .apart__section {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        color: $fontColor;
+        --uk-breakpoint-s: 640px;
+        --uk-breakpoint-m: 960px;
+        --uk-breakpoint-l: 1200px;
+        --uk-breakpoint-xl: 1600px;
+        --uk-leader-fill-content: .;
+        display: flow-root;
+        box-sizing: content-box;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        .apart__section-div {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            p {
+                font-size: 12px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .comments__section {
+        display: flex;
+        justify-content: center;
+        color: $fontColor;
+        .carousel-inner {
+            display: flex;
+            justify-content: center;
+            .carousel-item {
+                display: flex;
+                justify-content: center;
+                width: 40%;
+                .card {
+                    font-size: 12px;
+                    border: $fontColor 1px solid;
+                    padding: 20px;
+                    margin: 30px 0;
+                }
+            }
+        }
+    }
+    .img__section {
+        @include --flex;
+        img {
+            width: 200px;
+            height: 200px;
+            margin: 30px 20px;
         }
     }
     .services {
@@ -110,8 +208,31 @@ body {
         }
     }
     #form {
-        //display: none;
         margin: 40px 0;
+    }
+    .contacto {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        color: $fontColor;
+        form label {
+            font-size: 12px;
+            padding: 5px;
+            letter-spacing: 1px;
+        }
+        .contacto_data {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 5px;
+            font-size: 14px;
+        }
+    }
+    .contacto_title {
+        text-align: center;
+        padding: 30px;
     }
     .footer {
         .footer__container {
@@ -128,7 +249,7 @@ body {
 
 /* Media querys */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     .banner {
         flex-direction: column;
         justify-content: center;
@@ -146,26 +267,17 @@ body {
     }
     .carousel__section {
         img {
-            height: 40% !important;
+            height: 40vh !important;
         }
     }
     a {
         font-size: 10px !important;
     }
-}
-
-@media only screen and (max-width: 800px) {
-    .carousel__section {
+    .img__section {
         img {
-            height: 60% !important;
-        }
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .carousel__section {
-        img {
-            height: 80% !important;
+            width: 180px;
+            height: 180px;
+            margin: 0;
         }
     }
 }

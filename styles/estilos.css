@@ -13,6 +13,9 @@ form .form__buttons {
 body {
   background-color: #fff;
 }
+body main {
+  background-color: #fff;
+}
 body a {
   color: #AB8742;
   text-decoration: none;
@@ -20,6 +23,42 @@ body a {
 body a:hover {
   color: #846831;
   text-decoration: underline;
+}
+body .img-text {
+  width: 100%;
+  height: 300px;
+  display: block;
+  text-align: center;
+  padding: 40% 5%;
+  border-radius: 15px;
+}
+body .img-text h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+body .img-text p {
+  font-size: 14px;
+}
+body .single-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+body .img-area {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #fff;
+  overflow: hidden;
+  border-radius: 50%;
+}
+body .img-area img {
+  width: 100%;
+}
+body .carousel-indicators {
+  left: 0;
+  top: auto;
+  bottom: -70px;
 }
 body .banner {
   display: flex;
@@ -36,8 +75,8 @@ body .banner .banner__right {
   font-size: 80%;
 }
 body .banner .logo {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   align-items: center;
   border-radius: 75%;
   align-self: flex-end;
@@ -59,7 +98,67 @@ body .nav .nav__list .nav__list-item a {
   font-size: 18px;
 }
 body .carousel__section img {
-  height: 900px;
+  height: 650px;
+}
+body .apart__section {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  color: #666;
+  --uk-breakpoint-s: 640px;
+  --uk-breakpoint-m: 960px;
+  --uk-breakpoint-l: 1200px;
+  --uk-breakpoint-xl: 1600px;
+  --uk-leader-fill-content: .;
+  display: flow-root;
+  box-sizing: content-box;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+body .apart__section .apart__section-div {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+body .apart__section .apart__section-div p {
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body .comments__section {
+  display: flex;
+  justify-content: center;
+  color: #666;
+}
+body .comments__section .carousel-inner {
+  display: flex;
+  justify-content: center;
+}
+body .comments__section .carousel-inner .carousel-item {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+}
+body .comments__section .carousel-inner .carousel-item .card {
+  font-size: 12px;
+  border: #666 1px solid;
+  padding: 20px;
+  margin: 30px 0;
+}
+body .img__section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+body .img__section img {
+  width: 200px;
+  height: 200px;
+  margin: 30px 20px;
 }
 body .services {
   display: flex;
@@ -87,8 +186,8 @@ body .services .services__cards .services__cards-card {
   padding: 10px;
 }
 body .services .services__cards .services__cards-card img {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   padding: 10px;
   margin: 0 20px 20px 20px;
   border-radius: 5%;
@@ -96,6 +195,30 @@ body .services .services__cards .services__cards-card img {
 }
 body #form {
   margin: 40px 0;
+}
+body .contacto {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  color: #666;
+}
+body .contacto form label {
+  font-size: 12px;
+  padding: 5px;
+  letter-spacing: 1px;
+}
+body .contacto .contacto_data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 5px;
+  font-size: 14px;
+}
+body .contacto_title {
+  text-align: center;
+  padding: 30px;
 }
 body .footer .footer__container {
   display: flex;
@@ -111,7 +234,7 @@ body .footer .footer__container .footer__container-section1 .footer__container-s
 }
 
 /* Media querys */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
   .banner {
     flex-direction: column;
     justify-content: center;
@@ -132,20 +255,16 @@ body .footer .footer__container .footer__container-section1 .footer__container-s
   }
 
   .carousel__section img {
-    height: 40% !important;
+    height: 40vh !important;
   }
 
   a {
     font-size: 10px !important;
   }
-}
-@media only screen and (max-width: 800px) {
-  .carousel__section img {
-    height: 60% !important;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .carousel__section img {
-    height: 80% !important;
+
+  .img__section img {
+    width: 180px;
+    height: 180px;
+    margin: 0;
   }
 }/*# sourceMappingURL=estilos.css.map */
