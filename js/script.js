@@ -89,21 +89,23 @@ $(".services__cards-card").click(() => {
     })
 });
 
-$(".card-1").fadeIn(400, function() {
-    $(".card-2").fadeIn(400, function() {
-        $(".card-3").fadeIn(400, function() {
-            $(".card-4").fadeIn(400, function() {
-                $(".card-5").fadeIn(400, function() {
-                    $(".card-6").fadeIn(400, function() {
-                        $(".card-7").fadeIn(400, function() {
-                            $(".card-8").fadeIn(400);
+/*$(".services").ready(function() {
+    $(".card-1").fadeIn(400, function() {
+        $(".card-2").fadeIn(400, function() {
+            $(".card-3").fadeIn(400, function() {
+                $(".card-4").fadeIn(400, function() {
+                    $(".card-5").fadeIn(400, function() {
+                        $(".card-6").fadeIn(400, function() {
+                            $(".card-7").fadeIn(400, function() {
+                                $(".card-8").fadeIn(400);
+                            });
                         });
                     });
                 });
             });
         });
     });
-});
+});*/
 
 $("#form").slideDown(1000);
 

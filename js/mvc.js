@@ -1,6 +1,6 @@
 const home = () => {
     const div = document.createElement('div')
-    const views = `<section class="carousel__section">
+    const views = `<section class="carousel__section" style="display:none;">
     <div id="carouselExampleFade" class="carousel slide carousel-fade " data-bs-ride="carousel ">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -62,7 +62,7 @@ const home = () => {
 
 function reserva() {
     const div = document.createElement('div');
-    const views = `<form id="form" action="" class="row g-3"><div class="col-md-5">
+    const views = `<form id="form" action="" class="row g-3" style="display:none;"><div class="col-md-5">
                 <label for="form__name" class="form-label">Nombre completo:</label>
                 <input id="form__name" class="form-control" type="text" name="name">
 
@@ -120,52 +120,36 @@ function reserva() {
 }
 const cabanas = () => {
     const div = document.createElement('div')
-    const views = `<div id="DIV_1">
-	<div id="DIV_2">
-		<div id="DIV_3">
-			<img src="https://sitios.interwa.com/s/s3/fotos/sitio-nuevo-3-1588598974.jpg" alt="" id="IMG_4" />
+    const views = `
+	<section class="section_cabañas">
+		<div  class="section_cabañas-content">
+			<img  src="https://sitios.interwa.com/s/s3/fotos/sitio-nuevo-3-1588598974.jpg" alt="" id="IMG_4" />
 		</div>
-		<div id="DIV_5">
-			<div id="DIV_6">
-				<h1 id="H1_7">
-					Cabaña para 2 pasajeros
-				</h1>
-				<h3 id="H3_8">
-				</h3>
-				<p id="P_9">
-					La cabaña de 65 mts2 de una sola planta cuenta con cocina completamente equipada, baño completo, comedor, living con hogar a leña y TV. Además, posee una habitación matrimonial con cama Queen, TV, amplio placard, calefacción por radiadores, ropa blanca y servicio diario de mucama.
-				</p>
-			</div>
-		</div>
-	</div>
-    <div id="DIV_1">
-	<div id="DIV_2">
-		<div id="DIV_3">
-			<div id="DIV_4">
-				<h2 id="H2_5">
-					Cabaña para 3/6 pasajeros
-				</h2>
-				<h3 id="H3_6">
-				</h3>
-				<p id="P_7">
-					La cabaña de 75 mts2 distribuída en dos plantas cuenta con cocina completamente equipada, comedor, living con hogar a leña y TV por cable. Además posee baño completo en planta alta y toilette en planta baja. Dos habitaciones, una matrimonial con TV y otra con cuatro camas individuales. La cabaña posee calefacción por radiadores, ropa blanca y servicio diario de mucama.
-				</p>
-			</div>
-		</div>
-		<div id="DIV_8">
+        <div class="apart__section">
+            <div class="apart__section-div">
+                <h1 style="text-align: center; ">Cabaña para 2 pasajeros</h1>
+                <p style="text-align: center; ">La cabaña de 65 mts2 de una sola planta cuenta con cocina completamente equipada, baño completo, comedor, living con hogar a leña y TV. Además, posee una habitación matrimonial con cama Queen, TV, amplio placard, calefacción por radiadores, ropa blanca y servicio diario de mucama.</p>
+            </div>
+        </div>
+        <div class="apart__section">
+            <div class="apart__section-div">
+                <h1 style="text-align: center; ">Cabaña para 3/6 pasajeros</h1>
+                <p style="text-align: center; ">La cabaña de 75 mts2 distribuída en dos plantas cuenta con cocina completamente equipada, comedor, living con hogar a leña y TV por cable. Además posee baño completo en planta alta y toilette en planta baja. Dos habitaciones, una matrimonial con TV y otra con cuatro camas individuales. La cabaña posee calefacción por radiadores, ropa blanca y servicio diario de mucama.</p>
+            </div>
+        </div>
+		<div class="section_cabañas-content">
 			<img src="https://sitios.interwa.com/s/s3/fotos/sitio-nuevo-3-1588599013.jpg" alt="" id="IMG_9" />
 		</div>
-	</div>
-</div>
-    <link href="styles/cabañas.css" rel="stylesheet" type="text/css" />
-</div>`;
+    </section>`;
     div.innerHTML = views;
 
     return div;
 }
 const contacto = () => {
     const div = document.createElement('div')
-    const views = `<h1 class="contacto contacto_title">Consultas</h1> <section class="contacto"><div>
+    const views = `<h1 class="contacto_title">Consultas</h1>
+        <section class="contacto" style="display:none;">
+        <div>
             <form method="post" action="https://sitios.interwa.com/tools/envia_correo.php">
                 <label for="name1">Nombre: </label><input id="name1" type="text">
                 <label for="lastName1">Apellido: </label><input id="lastName1" type="text">
@@ -184,25 +168,22 @@ const contacto = () => {
                 <a href="mailto:demo@sitio.com"><br/><strong>demo@sitio.com</strong></a>
             </p>
         </div>
-        <link href="styles/contracto.css" rel="stylesheet" type="text/css" />
     </section>`
     div.innerHTML = views;
     return div;
 }
 const dondeEstamos = () => {
     const div = document.createElement('div')
-    const views = `<section class="apart__section"><div class="apart__section-div">
+    const views = `<section class="apart__section">
+        <div class="apart__section-div">
         <h1 style="text-align: center; ">Ubicación de las cabañas</h1>
-        <p style="text-align: center; ">Ubicado en pleno centro de la ciudad de San Martín de los Andes, a solo 8 cuadras de lago Lacar. En las inmediaciones del apart podrá encontrar todo lo que necesite, supermercado, farmacias, banco con cajero automatico, para que su estadía sea cómoda y placentera.
-        </p>
+        <p style="text-align: center; ">Ubicado en pleno centro de la ciudad de San Martín de los Andes, a solo 8 cuadras de lago Lacar. En las inmediaciones del apart podrá encontrar todo lo que necesite, supermercado, farmacias, banco con cajero automatico, para que su estadía sea cómoda y placentera.</p>
         <p style="text-align: center; ">Ubicado en pleno centro de la ciudad y rodeado por amplios y hermosos jardines el complejo <strong>Apart y Cabañas del Bosque</strong> se destaca por ser un oasis de naturaleza, buen gusto y calidad en la provincia del Neuquén.
             El <strong>Lago Lacar,</strong> la Ruta de los 7 Lagos y parte de la Ruta 40, camino que lleva al centro de <strong>Ski Chapelco</strong>, son algunos de los paseos turísticos cercanos a nuestro complejo.</p></div>
-            <div class="mapouter row">
+        <div class="mapouter row">
         <div " class="gmap_canvas col-md-12 col-lg-8"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=650&amp;height=400&amp;hl=en&amp;q=san Martin de los andes, argentina&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.fnfgo.com/">FNF Online</a></div>
         <style>
             .mapouter {
-                position: relative;
-                text-align: right;
                 width: 650px;
                 height: 400px;
             }
@@ -256,7 +237,10 @@ const servicios = () => {
         <div class="services__cards-card card-8 ">
             <img src="https://cdn0.casamientos.com.ar/vendor/4291/3_2/960/png/exterior.jpeg" alt="parque ">
             <p>parque</p>
-        </div></div></section>`;
+        </div></div>
+        </section>
+        <script>
+        </script>`;
     div.innerHTML = views;
     return div;
 }
