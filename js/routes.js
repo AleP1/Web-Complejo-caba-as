@@ -1,4 +1,4 @@
-window.addEventListener(newFunction(), () => {
+window.addEventListener('hashchange', () => {
     console.log(window.location.hash)
     router(window.location.hash)
     jQuery(window.location.hash)
@@ -46,11 +46,6 @@ const router = (hash) => {
     }
 }
 
-
-function newFunction() {
-    return 'hashchange'
-}
-
 const jQuery = (hash) => {
 
     switch (hash) {
@@ -67,6 +62,21 @@ const jQuery = (hash) => {
         case '#/reserva':
             {
                 $("#form").slideDown(1000);
+                $("#form__send").on("click", function submit() {
+                    const id = Math.floor(Math.random() * (1000000 - 1)) + 1
+                    const diaIngreso = $("#form__checkin").val()
+                    const diaEgreso = $("#form__checkout").val()
+                    const nombre = $("#form__name").val()
+                    const mail = $("#form__email").val()
+                    const telefono = $("#form__phone").val()
+                    const comentarios = $("#form__comments").val()
+                    const tipo = $("#form__type").val()
+
+                    const newBooking = new Booking(id, diaIngreso, diaEgreso, nombre, mail, telefono, comentarios, tipo);
+                    bookingList.push(newBooking);
+                    editDom(newBooking);
+                    storage(bookingList);
+                })
                 break;
             }
         case '#/servicios':

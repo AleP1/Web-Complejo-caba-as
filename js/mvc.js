@@ -48,15 +48,8 @@ const home = () => {
         <p style="text-align: center; ">Cocina full equipada, ropa blanca y toallas, baño privado con secador de pelo en cada unidad, TV Led en living y dormitorio, hogar a leña en todas las cabañas y una cálida atención familiar hacen que Apart y Cabañas del Lago
             sea una perfecta elección.</p>
     </div>
-</section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
-<script src="https://code.jquery.com/jquery-3.6.0.js " integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin=" anonymous "></script>
-<script src="js\script.js "></script>
-<script src="js\mvc.js "></script>
-<script src="js\routes.js "></script>
-`;
+</section>`;
     div.innerHTML = views;
-
     return div;
 }
 
