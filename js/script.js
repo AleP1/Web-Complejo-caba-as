@@ -13,7 +13,6 @@ class Booking {
 }
 
 //Array con todas las reservas
-const bookingList = [];
 
 
 function editDom(newBooking) {
@@ -70,11 +69,10 @@ $("#save").click(() => {
 
 //LocalStorage
 const storage = (bookingList) => {
-
+    console.log(bookingList);
     const guardarEnLocalStorage = (clave, valor) => { localStorage.setItem(clave, valor) };
 
-    for (let i = 0; i <= bookingList.length; i++) {
-        guardarEnLocalStorage(`Reservas`, JSON.stringify(bookingList[1]))
-        console.log(localStorage)
+    for (let i = 0; i < bookingList.length; i++) {
+        guardarEnLocalStorage("Reservas", JSON.stringify(bookingList))
     }
 }

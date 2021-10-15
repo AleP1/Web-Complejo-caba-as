@@ -47,6 +47,7 @@ const router = (hash) => {
 }
 
 const jQuery = (hash) => {
+    let bookingList = [];
 
     switch (hash) {
         case '#/':
@@ -76,6 +77,7 @@ const jQuery = (hash) => {
                     bookingList.push(newBooking);
                     editDom(newBooking);
                     storage(bookingList);
+                    console.log(bookingList[0]);
                 })
                 break;
             }
